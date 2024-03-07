@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothTest_isim_beh.exe" -prj "C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothTest_beh.prj" "work.sawtoothTest" 
