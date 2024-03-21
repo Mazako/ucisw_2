@@ -1,0 +1,4 @@
+vhdtdtfi -lib work keyboardDecoder.vhd -prj pila_sygnal -o keyboardDecoder.spl -module keyboardDecoder -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e keyboardDecoder.spl C:/Users/lab/Desktop/sawtooth/pila_sygnal/keyboardDecoder.sym 
+vhdtdtfi -lib work keyboardDecoder.vhd -prj pila_sygnal -o keyboardDecoder.spl -module keyboardDecoder -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e keyboardDecoder.spl C:/Users/lab/Desktop/sawtooth/pila_sygnal/keyboardDecoder.sym 

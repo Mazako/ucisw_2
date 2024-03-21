@@ -1,30 +1,3 @@
---------------------------------------------------------------------------------
--- Company: 
--- Engineer:
---
--- Create Date:   12:32:28 03/07/2024
--- Design Name:   
--- Module Name:   C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothTest.vhd
--- Project Name:  pila_sygnal
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: sawtoothSignal
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
---------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
@@ -46,7 +19,11 @@ ARCHITECTURE behavior OF sawtoothTest IS
          Addr : OUT  std_logic_vector(3 downto 0);
          DATA : OUT  std_logic_vector(11 downto 0);
          Clk : IN  std_logic;
-         Reset : IN  std_logic
+         Reset : IN  std_logic;
+         DO : IN  std_logic_vector(7 downto 0);
+         E0 : IN  std_logic;
+         F0 : IN  std_logic;
+         DO_Rdy : IN  std_logic
         );
     END COMPONENT;
     
@@ -54,6 +31,10 @@ ARCHITECTURE behavior OF sawtoothTest IS
    --Inputs
    signal Clk : std_logic := '0';
    signal Reset : std_logic := '0';
+   signal DO : std_logic_vector(7 downto 0) := (others => '0');
+   signal E0 : std_logic := '0';
+   signal F0 : std_logic := '0';
+   signal DO_Rdy : std_logic := '1';
 
  	--Outputs
    signal Start : std_logic;
@@ -73,12 +54,17 @@ BEGIN
           Addr => Addr,
           DATA => DATA,
           Clk => Clk,
-          Reset => Reset
+          Reset => Reset,
+          DO => DO,
+          E0 => E0,
+          F0 => F0,
+          DO_Rdy => DO_Rdy
         );
 
    -- Clock process definitions
    Clk_process :process
    begin
+		DO <= X"15";
 		Clk <= '0';
 		wait for Clk_period/2;
 		Clk <= '1';

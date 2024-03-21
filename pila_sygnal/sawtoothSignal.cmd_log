@@ -1,0 +1,5 @@
+vhdtdtfi -lib work sawtoothSignal.vhd -prj pila_sygnal -o sawtoothSignal.spl -module sawtoothSignal -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work sawtoothSignal.vhd -prj pila_sygnal -o sawtoothSignal.spl -module sawtoothSignal -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e sawtoothSignal.spl C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothSignal.sym 
+vhdtdtfi -lib work sawtoothSignal.vhd -prj pila_sygnal -o sawtoothSignal.spl -module sawtoothSignal -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e sawtoothSignal.spl C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothSignal.sym 
