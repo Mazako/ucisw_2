@@ -1,0 +1,8 @@
+[Inputs]
+Clk
+=Freq[11:0]=
+[Outputs]
+Char_WE
+Goto00
+=Char_DI[7:0]=
+[BiDir]

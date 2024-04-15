@@ -46,30 +46,42 @@ process (Clk, D0, F0, DO_Rdy)
 	begin
 	if rising_edge(Clk) and DO_Rdy = '1' then
 		case D0 is 
-			--Q
-			when X"15" => 
-				Freq <= "101110101011";
-			--W
-			when X"1D" =>
-				Freq <= "110000110101";
-			--A
-			when X"1C" =>
-				Freq <= "010111010101";
+			--Z
+			when X"1A" => 
+				Freq <= "101110101010";
 			--S
 			when X"1B" =>
-				Freq <= "010110000001";
-			--D
-			when X"23" =>
-				Freq <= "010100110010";
-			--Z
-			when X"1A" =>
-				Freq <= "010011101000";
+				Freq <= "101100000010";
 			--X
 			when X"22" =>
-				Freq <= "010010100001";
+				Freq <= "101001100100";
+			--D
+			when X"23" =>
+				Freq <= "100111001111";
 			--C
 			when X"21" =>
-				Freq <= "010001011111";
+				Freq <= "100101000010";
+			--V
+			when X"2A" =>
+				Freq <= "100010111101";
+			--G
+			when X"34" =>
+				Freq <= "100000111111";
+			--B
+			when X"32" =>
+				Freq <= "011111001001";
+			--H
+			when X"33" =>
+				Freq <= "011101011001";
+			--N
+			when X"31" =>
+				Freq <= "011011101111";
+			--J
+			when X"3B" =>
+				Freq <= "011010001011";
+			--M
+			when X"3A" =>
+				Freq <= "011000101101";
 			when others =>
 				Freq <= "000000000000";
 		end case;

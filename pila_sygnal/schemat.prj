@@ -1,0 +1,4 @@
+vhdl work "vga_fsm.vhd"
+vhdl work "sawtoothSignal.vhd"
+vhdl work "keyboardDecoder.vhd"
+vhdl work "schemat.vhf"

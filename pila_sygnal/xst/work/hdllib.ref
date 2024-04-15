@@ -1,0 +1,8 @@
+EN keyboarddecoder NULL C:/Users/lab/Desktop/sawtooth/pila_sygnal/keyboardDecoder.vhd sub00/vhpl02 1712229626
+EN vga_fsm NULL C:/Users/lab/Desktop/sawtooth/pila_sygnal/vga_fsm.vhd sub00/vhpl04 1712229628
+AR keyboarddecoder behavioral C:/Users/lab/Desktop/sawtooth/pila_sygnal/keyboardDecoder.vhd sub00/vhpl03 1712229627
+EN schemat NULL C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf sub00/vhpl06 1712229630
+AR sawtoothsignal behavioral C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothSignal.vhd sub00/vhpl01 1712229625
+EN sawtoothsignal NULL C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothSignal.vhd sub00/vhpl00 1712229624
+AR schemat behavioral C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf sub00/vhpl07 1712229631
+AR vga_fsm behavioral C:/Users/lab/Desktop/sawtooth/pila_sygnal/vga_fsm.vhd sub00/vhpl05 1712229629

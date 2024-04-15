@@ -1,0 +1,503 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: schemat.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "schemat.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "schemat"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : schemat
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothSignal.vhd" in Library work.
+Architecture behavioral of Entity sawtoothsignal is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/sawtooth/pila_sygnal/keyboardDecoder.vhd" in Library work.
+Architecture behavioral of Entity keyboarddecoder is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/sawtooth/pila_sygnal/vga_fsm.vhd" in Library work.
+Entity <vga_fsm> compiled.
+Entity <vga_fsm> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf" in Library work.
+Architecture behavioral of Entity schemat is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <schemat> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <sawtoothSignal> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <keyboardDecoder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <vga_fsm> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <schemat> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf" line 157: Instantiating black box module <DACWrite>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf" line 177: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf" line 204: Unconnected output port 'Busy' of component 'VGAtxt48x20'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf" line 204: Instantiating black box module <VGAtxt48x20>.
+Entity <schemat> analyzed. Unit <schemat> generated.
+
+Analyzing Entity <sawtoothSignal> in library <work> (Architecture <behavioral>).
+Entity <sawtoothSignal> analyzed. Unit <sawtoothSignal> generated.
+
+Analyzing Entity <keyboardDecoder> in library <work> (Architecture <behavioral>).
+Entity <keyboardDecoder> analyzed. Unit <keyboardDecoder> generated.
+
+Analyzing Entity <vga_fsm> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <Char_DI> in unit <vga_fsm> has a constant value of 00000001 during circuit operation. The register is replaced by logic.
+Entity <vga_fsm> analyzed. Unit <vga_fsm> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <sawtoothSignal>.
+    Related source file is "C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothSignal.vhd".
+WARNING:Xst:647 - Input <Reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <Start>.
+    Found 12-bit register for signal <DATA>.
+    Found 12-bit up counter for signal <i>.
+    Found 4-bit up counter for signal <j>.
+    Found 12-bit comparator equal for signal <Start$cmp_eq0000> created at line 29.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <sawtoothSignal> synthesized.
+
+
+Synthesizing Unit <keyboardDecoder>.
+    Related source file is "C:/Users/lab/Desktop/sawtooth/pila_sygnal/keyboardDecoder.vhd".
+WARNING:Xst:647 - Input <E0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 12-bit register for signal <Freq>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <keyboardDecoder> synthesized.
+
+
+Synthesizing Unit <vga_fsm>.
+    Related source file is "C:/Users/lab/Desktop/sawtooth/pila_sygnal/vga_fsm.vhd".
+    Found 1-bit register for signal <Char_WE>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <vga_fsm> synthesized.
+
+
+Synthesizing Unit <schemat>.
+    Related source file is "C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf".
+WARNING:Xst:646 - Signal <XLXN_21> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <XLXI_29_NewLine_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_29_Home_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <schemat> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 12-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 12-bit register                                       : 2
+# Comparators                                          : 1
+ 12-bit comparator equal                               : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <DACWrite.ngc>.
+Reading core <PS2_Kbd.ngc>.
+Reading core <VGAtxt48x20.ngc>.
+Loading core <DACWrite> for timing and area information for instance <XLXI_1>.
+Loading core <PS2_Kbd> for timing and area information for instance <XLXI_9>.
+Loading core <VGAtxt48x20> for timing and area information for instance <XLXI_29>.
+INFO:Xst:2261 - The FF/Latch <DATA_0> in Unit <XLXI_17> is equivalent to the following 7 FFs/Latches, which will be removed : <DATA_1> <DATA_2> <DATA_3> <DATA_4> <DATA_5> <DATA_6> <DATA_7> 
+WARNING:Xst:1710 - FF/Latch <DATA_0> (without init value) has a constant value of 0 in block <XLXI_17>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 12-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+# Comparators                                          : 1
+ 12-bit comparator equal                               : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <DATA_0> (without init value) has a constant value of 0 in block <sawtoothSignal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_1> (without init value) has a constant value of 0 in block <sawtoothSignal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_2> (without init value) has a constant value of 0 in block <sawtoothSignal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_3> (without init value) has a constant value of 0 in block <sawtoothSignal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_4> (without init value) has a constant value of 0 in block <sawtoothSignal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_5> (without init value) has a constant value of 0 in block <sawtoothSignal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_6> (without init value) has a constant value of 0 in block <sawtoothSignal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_7> (without init value) has a constant value of 0 in block <sawtoothSignal>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <schemat> ...
+
+Optimizing unit <sawtoothSignal> ...
+
+Optimizing unit <keyboardDecoder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block schemat, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : schemat.ngr
+Top Level Output File Name         : schemat
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 562
+#      AND2                        : 1
+#      AND3                        : 4
+#      AND3B1                      : 4
+#      BUF                         : 3
+#      GND                         : 4
+#      INV                         : 20
+#      LUT1                        : 61
+#      LUT2                        : 52
+#      LUT2_L                      : 4
+#      LUT3                        : 64
+#      LUT3_D                      : 1
+#      LUT3_L                      : 2
+#      LUT4                        : 130
+#      LUT4_D                      : 10
+#      LUT4_L                      : 10
+#      MUXCY                       : 77
+#      MUXF5                       : 26
+#      MUXF5_L                     : 2
+#      MUXF6                       : 6
+#      OR2                         : 5
+#      VCC                         : 4
+#      XOR2                        : 1
+#      XORCY                       : 71
+# FlipFlops/Latches                : 224
+#      FD                          : 53
+#      FDE                         : 90
+#      FDR                         : 34
+#      FDRE                        : 44
+#      FDRSE                       : 2
+#      FDSE                        : 1
+# RAMS                             : 2
+#      RAMB16_S9                   : 1
+#      RAMB16_S9_S9                : 1
+# Shift Registers                  : 3
+#      SRL16                       : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 4
+#      OBUF                        : 14
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      213  out of   4656     4%  
+ Number of Slice Flip Flops:            224  out of   9312     2%  
+ Number of 4 input LUTs:                357  out of   9312     3%  
+    Number used as logic:               354
+    Number used as Shift registers:       3
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    232     8%  
+ Number of BRAMs:                         2  out of     20    10%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk_50Mhz                          | BUFGP                  | 229   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.574ns (Maximum Frequency: 104.450MHz)
+   Minimum input arrival time before clock: 4.076ns
+   Maximum output required time after clock: 5.620ns
+   Maximum combinational path delay: 7.178ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk_50Mhz'
+  Clock period: 9.574ns (frequency: 104.450MHz)
+  Total number of paths / destination ports: 4153 / 466
+-------------------------------------------------------------------------
+Delay:               9.574ns (Levels of Logic = 9)
+  Source:            XLXI_29/XLXI_147/Mrom_DO_rom0000 (RAM)
+  Destination:       XLXI_29/XLXI_115/XLXI_155/PixOut (FF)
+  Source Clock:      Clk_50Mhz rising
+  Destination Clock: Clk_50Mhz rising
+
+  Data Path: XLXI_29/XLXI_147/Mrom_DO_rom0000 to XLXI_29/XLXI_115/XLXI_155/PixOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S9:CLK->DO6    1   2.800   0.420  XLXI_147/Mrom_DO_rom0000 (XLXN_899<6>)
+     begin scope: 'XLXI_115/XLXI_1'
+     begin scope: 'I_M01'
+     AND3:I0->O            1   0.704   0.420  I_36_30 (M1)
+     OR2:I0->O             1   0.704   0.000  I_36_38 (O)
+     end scope: 'I_M01'
+     MUXF5_L:I0->LO        1   0.321   0.000  I_M03 (M03)
+     MUXF6:I0->O           1   0.521   0.420  I_O (O)
+     end scope: 'XLXI_115/XLXI_1'
+     XOR2:I0->O            1   0.704   0.420  XLXI_115/XLXI_141 (XLXI_115/XLXN_727)
+     AND2:I1->O            1   0.704   0.424  XLXI_115/XLXI_154 (XLXI_115/XLXN_762)
+     LUT4:I3->O            1   0.704   0.000  XLXI_115/XLXI_155/iPixOut103 (XLXI_115/XLXI_155/iPixOut)
+     FD:D                      0.308          XLXI_115/XLXI_155/PixOut
+    ----------------------------------------
+    Total                      9.574ns (7.470ns logic, 2.104ns route)
+                                       (78.0% logic, 22.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50Mhz'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              4.076ns (Levels of Logic = 3)
+  Source:            Reset (PAD)
+  Destination:       XLXI_1/Cnt_0 (FF)
+  Destination Clock: Clk_50Mhz rising
+
+  Data Path: Reset to XLXI_1/Cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.610  Reset_IBUF (Reset_IBUF)
+     begin scope: 'XLXI_1'
+     LUT2:I1->O            5   0.704   0.633  Cnt_or00001 (Cnt_or0000)
+     FDR:R                     0.911          Cnt_0
+    ----------------------------------------
+    Total                      4.076ns (2.833ns logic, 1.243ns route)
+                                       (69.5% logic, 30.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50Mhz'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              5.620ns (Levels of Logic = 3)
+  Source:            XLXI_1/iBusy (FF)
+  Destination:       DAC_CS (PAD)
+  Source Clock:      Clk_50Mhz rising
+
+  Data Path: XLXI_1/iBusy to DAC_CS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRSE:C->Q            5   0.591   0.633  iBusy (iBusy)
+     INV:I->O              1   0.704   0.420  DAC_CS1_INV_0 (DAC_CS)
+     end scope: 'XLXI_1'
+     OBUF:I->O                 3.272          DAC_CS_OBUF (DAC_CS)
+    ----------------------------------------
+    Total                      5.620ns (4.567ns logic, 1.053ns route)
+                                       (81.3% logic, 18.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               7.178ns (Levels of Logic = 4)
+  Source:            Clk_50Mhz (PAD)
+  Destination:       SPI_SCK (PAD)
+
+  Data Path: Clk_50Mhz to SPI_SCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O          231   1.457   1.325  Clk_50Mhz_BUFGP (Clk_50Mhz_BUFGP)
+     begin scope: 'XLXI_1'
+     INV:I->O              1   0.704   0.420  SPI_SCK1_INV_0 (SPI_SCK)
+     end scope: 'XLXI_1'
+     OBUF:I->O                 3.272          SPI_SCK_OBUF (SPI_SCK)
+    ----------------------------------------
+    Total                      7.178ns (5.433ns logic, 1.745ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.21 secs
+ 
+--> 
+
+Total memory usage is 4532308 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

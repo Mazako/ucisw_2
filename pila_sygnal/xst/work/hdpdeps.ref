@@ -1,0 +1,30 @@
+V3 21
+FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/keyboardDecoder.vhd 2024/04/04.11:46:28 P.20131013
+EN work/keyboardDecoder 1712229626 \
+      FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/keyboardDecoder.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/keyboardDecoder/Behavioral 1712229627 \
+      FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/keyboardDecoder.vhd \
+      EN work/keyboardDecoder 1712229626
+FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothSignal.vhd 2024/03/21.14:18:59 P.20131013
+EN work/sawtoothSignal 1712229624 \
+      FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothSignal.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/sawtoothSignal/Behavioral 1712229625 \
+      FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/sawtoothSignal.vhd \
+      EN work/sawtoothSignal 1712229624
+FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf 2024/04/04.13:16:18 P.20131013
+EN work/schemat 1712229630 \
+      FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/schemat/BEHAVIORAL 1712229631 \
+      FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/schemat.vhf EN work/schemat 1712229630 \
+      CP DACWrite CP PS2_Kbd CP sawtoothSignal CP keyboardDecoder CP VGAtxt48x20 \
+      CP VCC CP BUF CP vga_fsm
+FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/vga_fsm.vhd 2024/04/04.13:20:16 P.20131013
+EN work/vga_fsm 1712229628 \
+      FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/vga_fsm.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/vga_fsm/Behavioral 1712229629 \
+      FL C:/Users/lab/Desktop/sawtooth/pila_sygnal/vga_fsm.vhd EN work/vga_fsm 1712229628
